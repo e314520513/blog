@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://165.227.95.151:4000
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -97,8 +97,20 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+plugins:
+  hexo-generator-feed
+feed:
+  type: atom      
+  path: atom.xml
+  limit: 20
 theme: keep
-
+# Search
+## See: https://github.com/theme-next/hexo-generator-searchdb
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
